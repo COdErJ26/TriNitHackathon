@@ -21,7 +21,7 @@ const Login = () => {
 
   let navigate = useNavigate();
   const routeChange = () => {
-    let path = `/TriNitHackathon/src/screens/SignUp.js`;
+    let path = `/SignUp`;
     navigate(path);
   };
 
@@ -50,9 +50,9 @@ const Login = () => {
         <Button colorScheme="teal" variant="ghost" mb={5}>
           Log In
         </Button>
-        {/* <Button colorScheme="teal" variant="link" mb={8} onClick={routeChange}>
+        <Button colorScheme="teal" variant="link" mb={8} onClick={routeChange}>
           Sign Up
-        </Button> */}
+        </Button>
         <FormControl display="flex" alignItems="center">
           <FormLabel htmlFor="dark_mode" mb="0">
             Enable Dark Mode?

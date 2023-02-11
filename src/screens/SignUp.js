@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import {
   Flex,
   Heading,
@@ -17,13 +19,11 @@ const SignUp = () => {
   const { toggleColorMode } = useColorMode();
   const formBackground = useColorModeValue("#F8FEE5", "gray.700");
 
-  //   let navigate = useNavigate();
-  //   const routeChange = () => {
-  //     console.log("1");
-  //     let path = `./Login.js`;
-  //     navigate(path);
-  //     console.log("2");
-  //   };
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/`;
+    navigate(path);
+  };
 
   return (
     <Flex h="100vh" alignItems="center" justifyContent="center">
@@ -51,9 +51,9 @@ const SignUp = () => {
         <Button colorScheme="teal" variant="ghost" mb={5}>
           Sign Up
         </Button>
-        {/* <Button colorScheme="teal" variant="link" mb={8} onClick={Login}>
+        <Button colorScheme="teal" variant="link" mb={8} onClick={routeChange}>
           Login
-        </Button> */}
+        </Button>
         <FormControl display="flex" alignItems="center">
           <FormLabel htmlFor="dark_mode" mb="0">
             Enable Dark Mode?
