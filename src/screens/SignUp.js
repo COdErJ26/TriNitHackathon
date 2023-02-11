@@ -51,9 +51,9 @@ const SignUp = () => {
         <Button colorScheme="teal" variant="ghost" mb={5}>
           Sign Up
         </Button>
-        <Button colorScheme="teal" variant="link" mb={8} onClick={Login}>
+        {/* <Button colorScheme="teal" variant="link" mb={8} onClick={Login}>
           Login
-        </Button>
+        </Button> */}
         <FormControl display="flex" alignItems="center">
           <FormLabel htmlFor="dark_mode" mb="0">
             Enable Dark Mode?

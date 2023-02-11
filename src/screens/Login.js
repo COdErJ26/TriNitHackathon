@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Flex,
   Heading,
@@ -10,18 +11,19 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import SignUp from "./SignUp";
 // import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { toggleColorMode } = useColorMode();
   const formBackground = useColorModeValue("#F8FEE5", "gray.700");
 
-  //   let navigate = useNavigate();
-  //   const routeChange = () => {
-  //     let path = `./SignUp.js`;
-  //     navigate(path);
-  //   };
+  // const [signedin, setsignedin] = useState(true);
+
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/TriNitHackathon/src/screens/SignUp.js`;
+    navigate(path);
+  };
 
   return (
     <Flex h="100vh" alignItems="center" justifyContent="center">
@@ -48,9 +50,9 @@ const Login = () => {
         <Button colorScheme="teal" variant="ghost" mb={5}>
           Log In
         </Button>
-        <Button colorScheme="teal" variant="link" mb={8} onClick={SignUp}>
+        {/* <Button colorScheme="teal" variant="link" mb={8} onClick={routeChange}>
           Sign Up
-        </Button>
+        </Button> */}
         <FormControl display="flex" alignItems="center">
           <FormLabel htmlFor="dark_mode" mb="0">
             Enable Dark Mode?
